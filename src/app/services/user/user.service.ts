@@ -11,6 +11,8 @@ export class UserService {
 
   constructor(private readonly http: HttpClient) {}
 
+  // This method recieves user data and register user and sets email in the local storage
+
   regUser(userData: UserRegData): Observable<User> {
     return this.http.post<User>(`${this.apiUrl}`, userData).pipe(
       tap((response) => {
