@@ -1,0 +1,9 @@
+<div class="post-list">
+  <ul class="row">
+    @for (post of postList; track post.id) {
+    <li>
+      <app-post-item [post]="post"></app-post-item>
+    </li>
+    }
+  </ul>
+</div>
